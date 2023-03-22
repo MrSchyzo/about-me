@@ -1,1 +1,5 @@
+# I was using intellij 🙃
 .idea
+
+# Hugo locks are not useful for VCS
+.hugo_build.lock
