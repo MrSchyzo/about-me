@@ -42,8 +42,13 @@ url = "https://github.com/mrschyzo/"
 [[params.social]]
 name = "Linkedin"
 icon = "fa fa-linkedin fa-2x"
-weight = 3
+weight = 2
 url = "https://www.linkedin.com/in/marco-catapano/"
+[[params.social]]
+name = "Resume"
+icon = "fa fa-file fa-2x"
+weight = 3
+url = "cv.pdf"
 
 # Menu links
 [[menu.main]]
@@ -51,6 +56,10 @@ name = "About"
 weight = 1
 url = "about/"
 [[menu.main]]
-name = "Posts"
+name = "Career"
 weight = 2
+url = "career/"
+[[menu.main]]
+name = "Posts"
+weight = 3
 url  = "posts/"
