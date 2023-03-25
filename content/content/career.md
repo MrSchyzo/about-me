@@ -8,12 +8,63 @@ author = "Mr.Schyzo"
 
 # About me, professionally
 
-TODO: a brief description
+My name's Marco Catapano and I have been working in software engineering since December 2015.
+My 7+ years of experience are mainly focused in back-end application development. 
+I spent these years with the intent of getting continuously better in software engineering. 
+I have always had curiosity towards languages in order to improve everyday; learning is a never ending process, especially in IT.
 
-## Job experience
+## Job Experience
 
-TODO: list of jobs
+This is all my relevant experience in software development.
+Select an entry to know more about it. 
+
+{{< timeline >}}
+    {{<event
+        url="https://traderepublic.com"
+        from="05/2022" to="current" 
+        role="Engineer II" company="Trade Republic GmbH" 
+    >}}
+    {{<event
+        url="https://www.prima.it/"
+        from="05/2021" to="04/2022" 
+        role="Software Engineer" company="Prima Assicurazioni SpA" 
+    >}}
+    {{<event
+        url="https://www.extrasys.it/en/red"
+        from="09/2018" to="04/2021" 
+        role="Software Engineer" company="Extra Red Srl" 
+    >}}
+    {{<event
+        url="https://www.gruppometa.it/"
+        from="09/2016" to="05/2018" 
+        role="Software Developer" company="M.E.T.A. srl" 
+    >}}
+    {{<event
+        url="https://www.siter.it/"
+        from="12/2015" to="08/2016" 
+        role="Software Developer" company="Siter srl" 
+    >}}
+    {{<event
+        url="https://www.siter.it/"
+        from="07/2015" to="10/2015" 
+        role="Trainee" company="Siter srl" 
+    >}}
+{{</ timeline >}}
 
 ## Education
 
-TODO: list of schools and studies
+My experience is also backed by the following education in my past years.
+Select an entry to know more about it.
+
+{{< timeline >}}
+    {{<event
+        url="https://di.unipi.it/"
+        from="09/2012" to="12/2015" 
+        role="Computer Science" company="Università di Pisa" 
+    >}}
+    {{<event
+        url="https://www.antoniopesenti.edu.it/"
+        from="09/2007" to="07/2012" 
+        role="Accounting and programming" company="I.I.S.S Antonio Pesenti" 
+    >}}
+{{</ timeline >}}

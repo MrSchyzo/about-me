@@ -24,9 +24,9 @@ enableTwemoji = true
 colorScheme = "auto"
 hidecolorschemetoggle = false
 
-# customCSS = ["css/custom.css"]
-# customSCSS = ["scss/custom.scss"]
-# customJS = ["js/custom.js"]
+customCSS = ["css/timeline.css"]
+customSCSS = []
+customJS = []
 
 [taxonomies]
 category = "categories"

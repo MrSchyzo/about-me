@@ -1,0 +1,55 @@
+/* Timeline Container */
+.timeline {
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Outer Layer with the timeline border */
+.timeline .outer {
+  border-left: 2px solid #333;
+}
+
+/* Card container */
+.timeline .card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #333;
+  color: gray;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Information about the timeline */
+.timeline .info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Title of the card */
+.timeline .title {
+  color: dodgerblue;
+  position: relative;
+}
+
+.timeline .title .a {
+  color: dodgerblue;
+}
+
+/* Timeline dot  */
+.timeline .title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  left: -36px;
+  top: 10px;
+  border: 3px solid dodgerblue;
+}
+
+figcaption {
+  font-weight: 600
+}
