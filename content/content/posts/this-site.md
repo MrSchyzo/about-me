@@ -249,4 +249,148 @@ In order to enforce this I did the following (after googling again, in hope [som
 
 ## Putting all together and deploy to GH Pages
 
-Trying it right now 🤞
+I wanted to deploy my site as soon as possible and, luckily enough, Hugo has [a guide](https://gohugo.io/hosting-and-deployment/hosting-on-github/) exactly for deploying on GH Pages.
+What I already did was on par with Step 4, so I just did Step 5+ that consists of adding a GH Workflow for Hugo.
+
+I'll try to explain the workflow, but notice that some chunks are not that different from my [initial workflow](#github-action).
+
+### When
+```yaml
+on:
+  push:
+    branches: ["master"]
+    paths:
+      - "content/**"
+
+  workflow_dispatch:
+```
+The workflow reacts to:
+- push to `master`, if some changes happen to `content/**`
+- manual start of the workflow through GH GUI
+
+### Permissions and concurrency
+```yaml
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "hugo-deploy"
+  cancel-in-progress: true
+```
+Same as my [GH Workflow](#github-action).
+
+### Defaults
+```yaml
+defaults:
+  run:
+    shell: bash
+```
+Sets the shell as `bash`
+
+### What to do
+This is rather different from my action:
+1. There are two jobs: `build` and `deploy`. The latter depends on the former.
+2. `deploy` only does the deployment after the artifact upload to GH Pages
+
+#### `build` job
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.111.3
+```
+`build` job uses an `ubuntu` runner and stores the desired Hugo version to an environment variable
+
+Steps are as follows:
+1. Installing Hugo CLI to the current runner
+    ```yaml
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+    ```
+2. Installing some SASS tool for processing any `scss` file (have I already said that I know zero about this stuff?)
+    ```yaml
+      - name: Install Dart Sass Embedded
+        run: sudo snap install dart-sass-embedded
+    ```
+3. Recursively cloning the repo - recursive because of the theme's git submodule
+    ```yaml
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+    ```
+4. Setting up GH Pages - note the `id` as it's needed for the build step as a baseURL
+    ```yaml
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+    ```
+5. Installing some NPM dependencies - maybe for the SASS tool...?
+    ```yaml
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+    ```
+6. Building `content` contents with Hugo - I'll explain this a bit more in depth
+    ```yaml
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          pushd content ; 
+          hugo \
+            --gc \
+            --minify \
+            --verbose \
+            --verboseLog \
+            --printI18nWarnings \
+            --printMemoryUsage \
+            --printPathWarnings \
+            --printUnusedTemplates \
+            --baseURL "${{ steps.pages.outputs.base_url }}/" && popd
+    ```
+   - Since I have all the content in `content` directory, the worker needs to go there before
+   - `hugo` is run with multiple flags
+     - `-gc` will execute some cleanp in the cache after the build
+     - `--minify` will reduce the size of the generated code
+     - from `--verbose` to `--printUnusedTemplates` is just to add a lot of logs to see what's going on
+     - `--baseURL` is set to whatever `pages` step output is (see `Setting up GH Pages` step)
+     - the last `&& popd` is another shell command separated from `hugo` invocation
+       - this is just to go back to the directory before `pushd content` has been called
+       - the `&&` is used to say "do it only if `hugo` succeeds" - a `;` could've swallowed any `hugo` failure in the execution!
+7. Uploading the generated content to GH Pages
+    ```yaml
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: content/public
+    ```
+   - just note that path is `content/public` because `hugo` will output the generated static site in `public` as default
+
+#### `deploy` job
+```yaml
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+```
+In short:
+- it waits for `build` to be successful
+- tells GH Pages to be published with the previously uploaded artifact
+- the environment URL is set to the `deployment` step's output
+
+### Just push this workflow
+
+As soon as you have this GH workflow ready, push it to your main branch and wait for the CI to happen.
