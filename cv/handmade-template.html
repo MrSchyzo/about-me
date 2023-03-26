@@ -1,0 +1,197 @@
+{{ with (ds "data") }}
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <style type="text/css">
+        @import url('https://themes.googleusercontent.com/fonts/css?kit=k3k702ZOKiLJc3WVjuplzHaYiPAslbK81rCSwRSnoRqS4b96hY1-3VJ9ZmMXwl4S');
+
+        body.doc-content {
+            max-width: 50em;
+        }
+
+        body.doc-content span.bold {
+            font-weight: 700;
+        }
+
+        body.doc-content table.root {
+            border-spacing: 0 !important;
+        }
+
+        body.doc-content td.skills div.container {
+            margin-bottom: 1.75em;
+        }
+
+        table.border-none {
+            border: none;
+            border-color: #111155;
+            margin-bottom: 1.25em;
+        }
+
+        .border-none tr td {
+            border-bottom: 1px solid;
+        }
+
+        .border-none tr:first-child td {
+            border-top: none;
+        }
+
+        .border-none tr:last-child td {
+            border-bottom: none;
+        }
+
+        .border-none tr td:first-child {
+            border-right: 1px solid;
+        }
+
+        body.doc-content {
+            font-family: roboto;
+            color: #111155;
+            text-align: justify;
+        }
+
+        body.doc-content h1 {
+            font-weight: 700;
+        }
+
+        body.doc-content div {
+            margin-top: 0.125em;
+            margin-bottom: 0.125em;
+        }
+
+        body.doc-content a {
+            color: #111155;
+        }
+
+        body.doc-content h2.role {
+            font-style: italic;
+            font-weight: 100;
+        }
+
+        body.doc-content h3 {
+            font-weight: 700;
+        }
+
+        body.doc-content table.experience td {
+            padding: 0.75em !important;
+        }
+
+        body.doc-content table.root td {
+            font-size: 10px;
+            padding: 1.5em;
+        }
+
+        body.doc-content table.root td.alternative {
+            background-color: #aaaaff;
+        }
+    </style>
+</head>
+<body class="doc-content">
+    <table class="root">
+        <tr>
+            <td class="alternative">
+                <h1>{{.name}} {{.surname}}</h1>
+                <h2 class="role">{{.role}}</h2>
+                <div>{{.summary}}</div>
+            </td>
+            <td>
+                <h2>About me</h2>
+                {{with .address}}
+                <div><i class="fa fa-home"></i> {{.street}} {{.number}}, {{.zip}} {{.city}} ({{.cityCode}})</div>
+                {{end}}
+                {{range .phones}}
+                <div><i class="fa fa-phone"></i> {{.}}</div>
+                {{end}}
+                {{range .emails}}
+                <div>️<i class="fa fa-envelope"></i> {{.}}</div>
+                {{end}}
+                <div><i class="fa fa-birthday-cake"></i> {{.birth.when}}</div>
+                {{range .links}}
+                <div><i class="fa fa-link"></i> <a href="{{.url}}">{{.name}}</a></div>
+                {{end}}
+                {{with .website}}
+                <div><i class="fa fa-globe"></i> <a href="{{.}}">Personal Website</a></div>
+                {{end}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Experience</h2>
+                <table class="experience border-none">
+                    {{range .jobs}}
+                    <tr>
+                        <td>
+                            {{.to}} - {{.from}}
+                        </td>
+                        <td>
+                            <h3>
+                                {{.role}}
+                                {{with .company}}
+                                    @ <a href="{{.url}}" target="_blank">{{.name}}</a>
+                                {{end}}
+                            </h3>
+                            <ul>
+                                {{range .responsibilities}}
+                                <li>{{.}}</li>
+                                {{end}}
+                                <li><span class="bold">Tech</span>: {{join .tech ", "}}</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    {{end}}
+                </table>
+                <hr>
+                <h2>Misc.</h2>
+                <p>{{.misc}}</p>
+            </td>
+            <td class="alternative skills">
+                <h2>Tech skills</h2>
+                {{with .skills}}
+                <h3>Languages</h3>
+                {{with .languages}}
+                <div class="container">
+                    <div>{{join .pro ", "}}</div>
+                    <div><span class="bold">Basic knowledge:</span> {{join .basic ", "}}</div>
+                </div>
+                {{end}}
+                <h3>Frameworks</h3>
+                <div class="container">
+                    <div>{{join .frameworks ", "}}</div>
+                </div>
+                <h3>Tools</h3>
+                <div class="container">
+                    <div>{{join .tools ", "}}</div>
+                </div>
+                <h3>Platforms</h3>
+                <div class="container">
+                    <div>{{join .platforms ", "}}</div>
+                </div>
+                {{end}}
+                <hr>
+                <h2>Spoken languages</h2>
+                <div class="container">
+                    {{range .speaks}}
+                    <div><span class="bold">{{.lang}}</span>: {{.level}}</div>
+                    {{end}}
+                </div>
+                <hr>
+                <h2>Education</h2>
+                {{range .education}}
+                <h3>{{.title}}</h3>
+                <div class="container">
+                    <h4>
+                        {{with .school}}
+                        <a href="{{.url}}" target="_blank">@ {{.name}}</a>
+                        {{end}}
+                    </h4>
+                    <div><span class="bold">Score: </span>{{.score}}</div>
+                    <div><span class="bold">Subjects: </span>{{join .subjects ", "}}</div>
+                </div>
+                {{end}}
+            </td>
+        </tr>
+    </table>
+    <p class="c0 c25"><span class="c6 c19"></span></p>
+</body>
+</html>
+{{end}}

@@ -18,3 +18,4 @@ This should be my personal site, assuming I have the will to complete it :D
     - prepare a template with `go` template syntax
     - run `gomplate -f <htmlTemplateFile> -o <htmlOutputFile> -d <key>=<yamlDataFile>`
 2. use `wkhtmltopdf <htmlFile> <pdfFile>`
+3. CI/CD to integrate gomplate and wkhtmltopdf

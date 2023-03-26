@@ -46,7 +46,7 @@ weight = 2
 url = "https://www.linkedin.com/in/marco-catapano/"
 [[params.social]]
 name = "Resume"
-icon = "fa fa-file fa-2x"
+icon = "fa fa-user fa-2x"
 weight = 3
 url = "cv.pdf"
 
