@@ -5,6 +5,7 @@ date = "2023-03-22"
 description = "Another developer with another Hugo-powered GH pages, how original!"
 tags = ["go","github","html","css"]
 categories = ["walkthrough"]
+toc = true
 +++
 
 # The tale

@@ -1,3 +1,19 @@
+details.toc summary::-webkit-details-marker,
+details.toc summary::marker {
+  content: "➕ ";
+  font-family: Roboto Mono,sans serif;
+}
+
+details[open].toc summary::marker {
+  content: "➖ ";
+}
+
+details.toc {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 8px;
+}
+
 /* Timeline Container */
 .timeline {
   margin: 20px auto;

@@ -1,5 +1,5 @@
 <figure>
-  <img src="{{ .Site.BaseURL }}{{ .Site.Params.imageDir }}/{{ .Get "filename" }}"
+  <img src="{{ .Site.BaseURL }}{{ .Site.Params.imageDir }}{{ .Get "filename" }}"
   {{ with .Get "alt"}}
   alt="{{.}}"
   {{ end }}

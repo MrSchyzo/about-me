@@ -24,7 +24,7 @@ enableTwemoji = true
 colorScheme = "auto"
 hidecolorschemetoggle = false
 
-customCSS = ["css/timeline.css"]
+customCSS = ["css/custom.css"]
 customSCSS = []
 customJS = []
 
@@ -63,3 +63,9 @@ url = "career/"
 name = "Posts"
 weight = 3
 url  = "posts/"
+
+[markup]
+    [markup.tableOfContents]
+    endLevel = 5
+    ordered = true
+    startLevel = 1
