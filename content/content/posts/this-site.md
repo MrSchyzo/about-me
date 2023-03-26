@@ -79,7 +79,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 ```
-The workflow runs one instance at time since concurrency is grouped by a constant expression (`"group" literal string`).
+The workflow runs one instance at time since concurrency is grouped by a constant expression (`"pages" literal string`).
 If another instance is run, the previous is cancelled.
 
 ### What to do
