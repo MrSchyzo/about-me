@@ -6,3 +6,10 @@
 
 # Hugo build
 content/public
+
+# Some macos shit
+.DS_Store
+
+# intermediate output for PDF CV
+cv/cv.html
+cv/cv.pdf

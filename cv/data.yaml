@@ -1,0 +1,118 @@
+name: Marco
+surname: Catapano
+birth:
+  when: 12/05/1993
+  where: Pisa
+address:
+  street: Via Modenese
+  number: 5
+  zip: 51100
+  city: Pistoia
+  cityCode: PT
+phones:
+  - "+39 3468772332"
+emails:
+  - "marco.catapano.93@gmail.com"
+  - "catapano-marco@mail.com"
+links:
+  - name: LinkedIn
+    url: "https://www.linkedin.com/in/marco-catapano/"
+  - name: GitHub
+    url: "https://github.com/MrSchyzo"
+website: "https://mrschyzo.github.io/about-me/"
+role: Software Engineer
+summary: >
+  7 years of experience focused in back-end application development. 
+  I spent these years with the intent of getting continuously better in software engineering. 
+  I have always had and I still have curiosity towards languages in order to improve everyday; 
+  learning is a never ending process, especially in IT.
+jobs:
+  - to: current
+    from: 2022/05
+    role: Engineer II
+    company:
+      name: Trade Republic
+      url: https://traderepublic.com/
+    responsibilities:
+      - Develop and extend BE µservices across multiple atoms
+    tech: [Kotlin, Spring, GH Actions, Elasticsearch, PostgreSQL, RabbitMQ, k8s, Datadog]
+  - to: 2022/04
+    from: 2021/05
+    role: Software Engineer
+    company:
+      name: Prima Assicurazioni
+      url: https://prima.it/
+    responsibilities:
+      - Develop FE and BE of the Agents’ platform
+    tech: [Rust, Elm, GraphQL, k8s, RabbitMQ, PostgreSQL, Datadog]
+  - to: 2021/05
+    from: 2018/09
+    role: Software Engineer
+    company:
+      name: Extra Red
+      url: https://www.extrasys.it/en/red
+    responsibilities:
+      - Develop Apache Camel routes and Spring REST services
+      - DevOps engineering with OCP 3.x and Jenkins
+    tech: [Camel, Spring, Jenkins, OCP, Java8+, GitLab, RDBMS, ActiveMQ]
+  - to: 2018/05
+    from: 2016/09
+    role: Backend Developer
+    company:
+      name: M.E.T.A. Srl
+      url: https://gruppometa.it/
+    responsibilities:
+      - Develop features in digital publishing back-ends
+      - Extending websites of cultural authorities
+    tech: [PHP, MySQL, Solr, Git, GitLab]
+  - to: 2016/08
+    from: 2015/12
+    role: Backend Developer
+    company:
+      name: Siter Srl
+      url: https://siter.it/
+    responsibilities:
+      - Extend company main product either by changing the codebase or by creating external executables (e.g. SOAP consumers, IMAP desktop apps, etc.)
+    tech: [VB6, C#, Java 7, .NET 4, RDBMS]
+  - to: 2015/10
+    from: 2015/07
+    role: Internship
+    company:
+      name: Siter Srl
+      url: https://siter.it/
+    responsibilities:
+      - Develop a SOAP service and consumer for the company's main product DB
+    tech: [VB6, C#, Java 7, .NET 4, RDBMS]
+skills:
+  languages:
+    pro: [Kotlin, Java, C#, Rust, VB, PHP]
+    basic: [Elm, Python, Golang, sh, F#, C, JS]
+  frameworks: [Spring, Quarkus, Apache Camel, .NET Core, Actix Web]
+  tools: [Maven, Gradle, NuGet, Cargo, Pip, Git, Docker, IntelliJ IDEA, VSCode, Visual Studio, Insomnia, Postman, Paw]
+  platforms: [
+    OCP, Kubernetes, AWS, EAP, GitHub, GitLab, Quay.io,
+    Datadog, Jira, Terraform, PostgreSQL, MySQL, Redis, Elasticsearch,
+    Terraform, SonarCloud, RabbitMQ, ActiveMQ, JBoss Fuse
+  ]
+speaks:
+  - lang: Italian
+    level: native
+  - lang: English
+    level: B2+
+education:
+  - title: Bachelor’s Degree in CompSci
+    score: 110/110 - with honours
+    subjects: [algorithms, data structures, FP, OOP, basic math, formal languages, RDBMS, computer arch, networks]
+    school:
+      name: University of Pisa
+      url: https://di.unipi.it
+  - title: Business, Accounting, Programming ("Mercurio" project)
+    score: 100/100 - no honours
+    subjects: [economics, applied math, IT]
+    school:
+      name: I.I.S.S. Antonio Pesenti
+      url: https://www.antoniopesenti.edu.it
+misc: >
+  In compliance with the GDPR and Italian Legislative Decree no. 196 dated 30/06/2003, 
+  I hereby authorize the recipient of this document to use and process my personal details for the purpose of recruiting
+  and selecting staff and I confirm to be informed of my rights in accordance to art. 7 of the above mentioned Decree.
