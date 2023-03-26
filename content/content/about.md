@@ -6,8 +6,6 @@ aliases = ["about-me", "about-mrschyzo", "contact"]
 author = "Mr.Schyzo"
 +++
 
-# Hello there
-
 Hey all 👋
 
 This is pretty much a work in progress. The site will surely be more complete as soon as I put more work on it.
