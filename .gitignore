@@ -3,3 +3,6 @@
 
 # Hugo locks are not useful for VCS
 .hugo_build.lock
+
+# Hugo build
+content/public
