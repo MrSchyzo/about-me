@@ -25,6 +25,9 @@ jobs:
   update:
     runs-on: ubuntu-20.04
     steps:
+      - name: Store current working directory
+        id: pwd
+        run: echo "out=$(pwd)" | tee $GITHUB_OUTPUT
       - name: Setup dependencies
         run: "sudo apt update && sudo apt install -y xfonts-75dpi xfonts-base"
       - name: Install gomplate
@@ -40,8 +43,8 @@ jobs:
       - name: Generate CV
         run: >
           pushd cv ;
-          gomplate -f handmade-template.html -o cv.html -d data=data.yaml && \
-          wkhtmltopdf cv.html cv.pdf && \
+          "${{ steps.pwd.outputs.out }}/gomplate" -f handmade-template.html -o cv.html -d data=data.yaml && \
+          "${{ steps.pwd.outputs.out }}/wkhtmltopdf" cv.html cv.pdf && \
           mv cv.* ../content/static/cv/ && \
           popd
       - name: Check meaningful changes in content
