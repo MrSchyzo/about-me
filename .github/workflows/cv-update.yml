@@ -40,12 +40,7 @@ jobs:
       - name: Generate CV
         run: >
           ls -halt ${{ steps.pwd.outputs.out }} ;
-          pushd cv ;
-          ../gomplate -f handmade-template.html -o cv.html -d data=data.yaml && \
-          rm -f ../gomplate && \
-          wkhtmltopdf cv.html cv.pdf && \
-          mv cv.* ../content/static/cv/ && \
-          popd
+          pushd cv && ../gomplate -f handmade-template.html -o cv.html -d data=data.yaml && wkhtmltopdf cv.html cv.pdf && mv cv.* ../content/static/cv/ && popd && rm -f gomplate
       - name: Check meaningful changes in content
         id: change
         run: |
