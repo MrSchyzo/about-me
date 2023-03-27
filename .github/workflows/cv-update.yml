@@ -25,6 +25,8 @@ jobs:
   update:
     runs-on: ubuntu-20.04
     steps:
+      - name: Setup dependencies
+        run: "sudo apt update && sudo apt install -y xfonts-75dpi xfonts-base"
       - name: Install gomplate
         run: "curl -L --fail -o gomplate https://github.com/hairyhenderson/gomplate/releases/download/v3.11.4/gomplate_linux-amd64"
       - name: Make gomplate executable
