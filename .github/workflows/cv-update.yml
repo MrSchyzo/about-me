@@ -42,9 +42,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Generate CV
         run: >
+          ls -halt ${{ steps.pwd.outputs.out }} ;
           pushd cv ;
-          "${{ steps.pwd.outputs.out }}/gomplate" -f handmade-template.html -o cv.html -d data=data.yaml && \
-          "${{ steps.pwd.outputs.out }}/wkhtmltopdf" cv.html cv.pdf && \
+          ${{ steps.pwd.outputs.out }}/gomplate -f handmade-template.html -o cv.html -d data=data.yaml && \
+          ${{ steps.pwd.outputs.out }}/wkhtmltopdf cv.html cv.pdf && \
           mv cv.* ../content/static/cv/ && \
           popd
       - name: Check meaningful changes in content
