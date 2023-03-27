@@ -23,6 +23,7 @@ defaults:
 
 jobs:
   update:
+    runs-on: ubuntu-latest
     steps:
       - name: Install gomplate
         run: >
@@ -54,7 +55,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           branch: bot/cv-update
-          title:          "[automatic PR] Update CV in static content"
+          title:          "[Automatic PR] Update CV in static content"
           commit-message: "Update CV in static content"
           delete-branch: true
           labels: patch
