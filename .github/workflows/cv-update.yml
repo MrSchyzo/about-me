@@ -23,14 +23,14 @@ defaults:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Install gomplate
         run: "curl -L --fail -o gomplate https://github.com/hairyhenderson/gomplate/releases/download/v3.11.4/gomplate_linux-amd64"
       - name: Make gomplate executable
         run: "chmod +x gomplate"
       - name: Install wkhtmltopdf
-        run: "curl -L --fail -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.xenial_amd64.deb"
+        run: "curl -L --fail -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb"
       - name: Make wkhtmltopdf executable
         run: "yes | sudo dpkg -i wkhtmltopdf.deb"
       - name: Checkout code
