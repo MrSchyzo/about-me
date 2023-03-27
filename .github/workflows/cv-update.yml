@@ -9,8 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
+  contents: write
   id-token: write
   pull-requests: write
 
@@ -54,7 +53,7 @@ jobs:
         if: ${{ steps.change.outputs.presence == 'true' }}
         uses: peter-evans/create-pull-request@v4
         with:
-          branch: bot/cv-update
+          branch: auto/cv-update
           title:          "[Automatic PR] Update CV in static content"
           commit-message: "Update CV in static content"
           delete-branch: true
