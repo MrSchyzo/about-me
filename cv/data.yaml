@@ -4,7 +4,7 @@ birth:
   when: 12/05/1993
   where: Pisa
 address:
-  street: Via Modenese
+  street: via Modenese
   number: 5
   zip: 51100
   city: Pistoia
