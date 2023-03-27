@@ -31,10 +31,10 @@ jobs:
         run: "curl -L --fail -o gomplate https://github.com/hairyhenderson/gomplate/releases/download/v3.11.4/gomplate_linux-amd64"
       - name: Make gomplate executable
         run: "chmod +x gomplate"
-      - name: Install wkhtmltopdf
+      - name: Download wkhtmltopdf package
         run: "curl -L --fail -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb"
-      - name: Make wkhtmltopdf executable
-        run: "yes | sudo dpkg -i wkhtmltopdf.deb"
+      - name: Install wkhtmltopdf
+        run: "sudo dpkg --force-confold -i wkhtmltopdf.deb"
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Generate CV
