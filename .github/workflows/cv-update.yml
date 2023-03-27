@@ -1,0 +1,60 @@
+name: Update CV - PR
+
+on:
+  push:
+    branches: ["master"]
+    paths:
+      - "cv/**"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "update"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  update:
+    steps:
+      - name: Install gomplate
+        run: >
+          curl -o gomplate https://github.com/hairyhenderson/gomplate/releases/download/v3.11.4/gomplate_linux-amd64 && \
+          chmod +x gomplate
+      - name: Install wkhtmltopdf
+        run: >
+          curl -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.xenial_amd64.deb && \
+          sudo dpkg -y wkhtmltopdf.deb
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Generate CV
+        run: >
+          pushd cv ;
+          gomplate -f handmade-template.html -o cv.html -d data=data.yaml && \
+          wkhtmltopdf cv.html cv.pdf && \
+          mv cv.* ../content/static/cv/ && \
+          popd
+      - name: Check meaningful changes in content
+        id: change
+        run: |
+          if [ -n "$(git status -s content/static/cv/)" ] ; then
+            echo "presence=true" | tee $GITHUB_OUTPUT
+          else
+            echo "No meaningful edits"
+          fi
+      - name: Pull Request
+        if: ${{ steps.change.outputs.presence == 'true' }}
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: bot/cv-update
+          title:          "[automatic PR] Update CV in static content"
+          commit-message: "Update CV in static content"
+          delete-branch: true
+          labels: patch

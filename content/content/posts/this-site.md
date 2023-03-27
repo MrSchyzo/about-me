@@ -226,7 +226,7 @@ I leave the details to the blog post I mentioned some sentences ago, but if you 
 I put an image in `content/static/img/screen-gh-source.png`. 
 
 When I wanted to refer an image in this page, I tried the following:
-- built-in figure shortcode `{{<figure src="img/screen-gh-source.png" title="Where to set GH Actions">}}`:
+- built-in figure shortcode `{{</*figure src="img/screen-gh-source.png" title="Where to set GH Actions"*/>}}`:
   - result was an `img` tag referring to `http://localhost:1313/about-me/posts/this-site/img/screen-gh-source.png`
 - `![some-caption](img/screen-gh-source.png)`
   - result was an `img` tag referring to `http://localhost:1313/about-me/posts/this-site/img/screen-gh-source.png`
