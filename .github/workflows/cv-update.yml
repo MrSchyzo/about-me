@@ -25,9 +25,8 @@ jobs:
   update:
     runs-on: ubuntu-20.04
     steps:
-      - name: Store current working directory
-        id: pwd
-        run: echo "out=$(pwd)" | tee $GITHUB_OUTPUT
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Setup dependencies
         run: "sudo apt update && sudo apt install -y xfonts-75dpi xfonts-base"
       - name: Install gomplate
@@ -37,17 +36,17 @@ jobs:
       - name: Download wkhtmltopdf package
         run: "curl -L --fail -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb"
       - name: Install wkhtmltopdf
-        run: "sudo dpkg --force-confold -i wkhtmltopdf.deb"
-      - name: Checkout code
-        uses: actions/checkout@v3
+        run: "sudo dpkg --force-confold -i wkhtmltopdf.deb && rm -f wkhtmltopdf.deb"
       - name: Generate CV
         run: >
           ls -halt ${{ steps.pwd.outputs.out }} ;
           pushd cv ;
-          ${{ steps.pwd.outputs.out }}/gomplate -f handmade-template.html -o cv.html -d data=data.yaml && \
-          ${{ steps.pwd.outputs.out }}/wkhtmltopdf cv.html cv.pdf && \
+          ../gomplate -f handmade-template.html -o cv.html -d data=data.yaml && \
+          ../wkhtmltopdf cv.html cv.pdf && \
           mv cv.* ../content/static/cv/ && \
           popd
+      - name: Remove unwanted executable
+        run: rm -f gomplate
       - name: Check meaningful changes in content
         id: change
         run: |
