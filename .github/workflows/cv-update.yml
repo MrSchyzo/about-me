@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
+  contents: write
   id-token: write
+  pull-requests: write
 
 concurrency:
   group: "update"
@@ -23,25 +23,24 @@ defaults:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-      - name: Install gomplate
-        run: >
-          curl -o gomplate https://github.com/hairyhenderson/gomplate/releases/download/v3.11.4/gomplate_linux-amd64 && \
-          chmod +x gomplate
-      - name: Install wkhtmltopdf
-        run: >
-          curl -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.xenial_amd64.deb && \
-          sudo dpkg -y wkhtmltopdf.deb
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Setup dependencies
+        run: "sudo apt update && sudo apt install -y xfonts-75dpi xfonts-base"
+      - name: Install gomplate
+        run: "curl -L --fail -o gomplate https://github.com/hairyhenderson/gomplate/releases/download/v3.11.4/gomplate_linux-amd64"
+      - name: Make gomplate executable
+        run: "chmod +x gomplate"
+      - name: Download wkhtmltopdf package
+        run: "curl -L --fail -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb"
+      - name: Install wkhtmltopdf
+        run: "sudo dpkg --force-confold -i wkhtmltopdf.deb && rm -f wkhtmltopdf.deb"
       - name: Generate CV
         run: >
-          pushd cv ;
-          gomplate -f handmade-template.html -o cv.html -d data=data.yaml && \
-          wkhtmltopdf cv.html cv.pdf && \
-          mv cv.* ../content/static/cv/ && \
-          popd
+          ls -halt ${{ steps.pwd.outputs.out }} ;
+          pushd cv && ../gomplate -f handmade-template.html -o cv.html -d data=data.yaml && wkhtmltopdf cv.html cv.pdf && mv cv.* ../content/static/cv/ && popd && rm -f gomplate
       - name: Check meaningful changes in content
         id: change
         run: |
@@ -54,7 +53,7 @@ jobs:
         if: ${{ steps.change.outputs.presence == 'true' }}
         uses: peter-evans/create-pull-request@v4
         with:
-          branch: bot/cv-update
+          branch: auto/cv-update
           title:          "[Automatic PR] Update CV in static content"
           commit-message: "Update CV in static content"
           delete-branch: true
