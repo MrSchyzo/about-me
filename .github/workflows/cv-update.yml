@@ -32,7 +32,7 @@ jobs:
       - name: Install wkhtmltopdf
         run: "curl -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.xenial_amd64.deb"
       - name: Make wkhtmltopdf executable
-        run: "yes | dpkg -i wkhtmltopdf.deb"
+        run: "yes | sudo dpkg -i wkhtmltopdf.deb"
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Generate CV
