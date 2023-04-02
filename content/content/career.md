@@ -8,15 +8,17 @@ author = "Mr.Schyzo"
 
 # About me, professionally
 
-My name's Marco Catapano and I have been working in software engineering since December 2015.
-My 7+ years of experience are mainly focused in back-end application development. 
-I spent these years with the intent of getting continuously better in software engineering. 
-I have always had curiosity towards languages in order to improve everyday; learning is a never ending process, especially in IT.
+Basically, I am a developer/engineer and I have been working in software engineering since December 2015.
+My 7+ years of experience are mainly focused in back-end application development 
+and I spent these years with the intent of getting continuously better in software engineering by working in different
+companies, each one with different technologies and ways of work. 
+I believe that this heterogeneous set of experiences allows me to be fairly versatile and pick up new tech 
+with little friction.
 
 ## Job Experience
 
-This is all my relevant experience in software development.
-Select an entry to know more about it. 
+This (badly) formatted timeline describes my relevant job experience in software engineering, as you can imagine, the
+further you go back, the foggier is my memory about that.
 
 {{< timeline >}}
     {{<event
@@ -53,8 +55,10 @@ Select an entry to know more about it.
 
 ## Education
 
-My experience is also backed by the following education in my past years.
-Select an entry to know more about it.
+My experience is also backed up with some relevant education in high school and university and this helped me in make my
+skill grow even more since I already had some fundamentals before beginning to work 40h+ a week.
+
+Again, the "further => foggier memory" rule applies.
 
 {{< timeline >}}
     {{<event

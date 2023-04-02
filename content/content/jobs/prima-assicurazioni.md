@@ -25,11 +25,17 @@ platform in order to ship new features. The features I contributed to were used 
 - enhance Agents' experience, like a calendar used to aggregate which notable events were due (e.g. payments, expirations)
 - increase the cross-sell capabilities of the Agents', like the integration with the Home Insurance product
 
+This was a brief parenthesis, but I think it made me even more versatile than before! I used two languages I've never used 
+beforehand and they are rather niche compared to the likes of Java, JS, PHP, etc. I was also able to appreciate the value
+of observability in a cloud-first environment due to the use of Datadog.
+Prima was a breath of fresh air in these regards.
+
 ## Role & Responsibilities
 
 As a software engineer, my responsibilities mainly revolve around being an owner of the teams' project and sometimes contributing
 to other teams' projects. To give a non-exhaustive list, a Software Engineer in Prima has to:
-- develop and maintain teams' µservices
+- develop and maintain team's µservices
+- contributing to other teams' repositories
 - participating in the team's discussions around what to develop and provide technical insights
 - interact with external teams when an integration is needed
 - onboard newcomers and mentoring more junior engineers
@@ -48,6 +54,7 @@ In "Intermediari" team, we used:
 - Elm - as the frontend language
 - Robot Framework - as the e2e automated testing framework
 - Braintree - as the payments' provider
+- Drone - for the CD
 
 When contributing to other µservices, technologies also implied:
 - Elixir - as one of the main backend languages

@@ -22,6 +22,12 @@ Recommendations offers features such as the search bar, "top movers", "trending 
 In general our team's scope is anything that has to relate to exploring and discovering instruments.
 Depending on the company needs, I also happen to join other teams to help with their projects' development.
 
+This is my first experience in an international English-speaking company 
+and it is where my knowledge of cloud-native development grew further. I've also had opportunities to transition into 
+a T-shaped engineer able to tackle problems with a bit more breadth, not only focusing on coding, but also actively contributing to 
+make choices in the architecture while shipping medium-sized features.
+Also, here is where I made use of GH Actions for the first time.
+
 ## Role & Responsibilities
 
 As a mid-level engineer, my responsibilities mainly revolve around being an owner of the teams' project and having an impact
@@ -41,6 +47,7 @@ In Trade Republic backends we commonly use:
 - JVM 17+ - as the runtime
 - Spring Boot - as the go-to framework
 - Kotlin - as the go-to programming language
+- Vert.x - as a backend reactive library
 - RabbitMQ - as the messaging system
 - EKS - as the container orchestration
 - ArgoCD - as the kubernetes' objects synchronisation mechanism
