@@ -15,12 +15,21 @@ author = "Mr.Schyzo"
 
 ## Summary
 
-I am working in [Trade Republic GmbH](https://traderepublic.com) as an Engineer II on backend. I am part of the 
-recommendations team that owns a non-trivial amount of the screens of the Trade Republic app, in particular the `discover`
-screen.
-Recommendations offers features such as the search bar, "top movers", "trending searches", "trending stocks", and "top savers".
-In general our team's scope is anything that has to relate to exploring and discovering instruments.
-Depending on the company needs, I also happen to join other teams to help with their projects' development.
+I am working in [Trade Republic GmbH](https://traderepublic.com) as an Engineer II on backend. I started as part of the 
+recommendations team that owns a non-trivial amount of the `wealth` screen, where a user can inspect their portfolio chart,
+look for instruments, and look at the portfolio composition.
+Recommendations was owner of features such as the search bar, "top movers", "trending searches", "trending stocks", and "top savers".
+Now the team has been merged into the `browse & insights` team while keeping the ownership of the aforementioned features.
+
+In `browse & insights`, I:
+- (currently) contribute to the enhancement of the users' portfolio chart
+- help in shaping such enhancement by writing RFCs describing the obtainable state given the time
+- own the `instrument-search` µservice, and as owner I am the point of contact in case any engineer needs support in modifying
+  such µservice
+
+Depending on the company needs, I also happen to join other teams to help with their projects' development like the `timeline` team, in
+which I helped with the platformisation of Trade Republic timeline. This platformisation allows us to launch new products more easily
+while avoiding external teams to depend on `timeline` team for new features.
 
 This is my first experience in an international English-speaking company 
 and it is where my knowledge of cloud-native development grew further. I've also had opportunities to transition into 
@@ -39,7 +48,10 @@ even in other teams. To give a non-exhaustive list, an Engineer II has to:
 - interact with external teams when an integration is needed
 - onboard newcomers and mentoring more junior engineers
 - complying and contributing to the technical best practices
-- (I've yet to do this) participate in recruiting
+- help recruiting, in particular:
+    - assessing take-home tasks
+    - discussing solutions to the take-home tasks with the candidates
+    - participating in the live coding interview
 
 ## Involved technologies
 
@@ -57,10 +69,11 @@ In Trade Republic backends we commonly use:
 - Snyk - as the security static analysis tool
 - SonarQube - as the code's static analysis tool
 
-In particular, for Recommendations, we also use:
+In particular, for `browse & insights`, we also use:
 - AWS S3 - to store and retrieve files from Data Analysis pipelines
 - Airflow - to define the DAG of such pipelines
 - AWS OpenSearch - to provide text-search capabilities for the search bar
+- ScyllaDB - to store every user portfolio valuation evolution over time
 
 Other technologies I sometimes use by contributing to other projects:
 - GH Actions - for defining the CI
