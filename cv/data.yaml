@@ -35,7 +35,9 @@ jobs:
       url: https://traderepublic.com/
     responsibilities:
       - Develop and extend BE µservices across multiple atoms
-    tech: [Kotlin, Spring, GH Actions, Elasticsearch, PostgreSQL, RabbitMQ, k8s, Datadog]
+      - Participating in technical interviews
+      - Help in shaping new developments by writing RFCs or similar documentation
+    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, PostgreSQL, RabbitMQ, k8s, Datadog]
   - to: 2022/04
     from: 2021/05
     role: Software Engineer
@@ -92,7 +94,7 @@ skills:
   platforms: [
     OCP, Kubernetes, AWS, EAP, GitHub, GitLab, Quay.io,
     Datadog, Jira, Terraform, PostgreSQL, MySQL, Redis, Elasticsearch,
-    Terraform, SonarCloud, RabbitMQ, ActiveMQ, JBoss Fuse
+    ScyllaDB, Terraform, SonarCloud, RabbitMQ, ActiveMQ, JBoss Fuse
   ]
 speaks:
   - lang: Italian
