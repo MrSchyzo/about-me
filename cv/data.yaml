@@ -36,8 +36,8 @@ jobs:
     responsibilities:
       - Develop and extend BE µservices across multiple atoms
       - Participating in technical interviews
-      - Help in shaping new developments by writing RFCs or similar documentation
-    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, PostgreSQL, RabbitMQ, k8s, Datadog]
+      - Help in shaping new developments by writing RFCs and other documentation
+    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, PostgreSQL, RabbitMQ, k8s, Datadog, AWS]
   - to: 2022/04
     from: 2021/05
     role: Software Engineer
@@ -46,7 +46,7 @@ jobs:
       url: https://prima.it/
     responsibilities:
       - Develop FE and BE of the Agents’ platform
-    tech: [Rust, Elm, GraphQL, k8s, RabbitMQ, PostgreSQL, Datadog]
+    tech: [Rust, Docker, Elm, GraphQL, k8s, RabbitMQ, PostgreSQL, Datadog]
   - to: 2021/05
     from: 2018/09
     role: Software Engineer
@@ -56,7 +56,7 @@ jobs:
     responsibilities:
       - Develop Apache Camel routes and Spring REST services
       - DevOps engineering with OCP 3.x and Jenkins
-    tech: [Camel, Spring, Jenkins, OCP, Java8+, GitLab, RDBMS, ActiveMQ]
+    tech: [Camel, Spring, Jenkins, OCP, Docker, Java8+, GitLab, RDBMS, ActiveMQ]
   - to: 2018/05
     from: 2016/09
     role: Backend Developer
@@ -66,7 +66,7 @@ jobs:
     responsibilities:
       - Develop features in digital publishing back-ends
       - Extending websites of cultural authorities
-    tech: [PHP, MySQL, Solr, Git, GitLab]
+    tech: [PHP, MySQL, Solr, Git, GitLab, Bash]
   - to: 2016/08
     from: 2015/12
     role: Backend Developer
@@ -89,7 +89,7 @@ skills:
   languages:
     pro: [Kotlin, Java, C#, Rust, VB, PHP]
     basic: [Elm, Python, Golang, sh, F#, C, JS]
-  frameworks: [Spring, Quarkus, Apache Camel, .NET Core, Actix Web]
+  frameworks: [Spring, VertX, Quarkus, Apache Camel, .NET Core, Actix Web]
   tools: [Maven, Gradle, NuGet, Cargo, Pip, Git, Docker, IntelliJ IDEA, VSCode, Visual Studio, Insomnia, Postman, Paw]
   platforms: [
     OCP, Kubernetes, AWS, EAP, GitHub, GitLab, Quay.io,
