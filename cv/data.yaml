@@ -19,6 +19,8 @@ links:
     url: "https://www.linkedin.com/in/marco-catapano/"
   - name: GitHub
     url: "https://github.com/MrSchyzo"
+  - name: LeetCode
+    url: "https://leetcode.com/MrSchyzo"
 website: "https://mrschyzo.github.io/about-me/"
 role: Software Engineer
 summary: >
@@ -37,7 +39,7 @@ jobs:
       - Develop and extend BE µservices across multiple atoms
       - Participating in technical interviews
       - Help in shaping new developments by writing RFCs and other documentation
-    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, PostgreSQL, RabbitMQ, k8s, Datadog, AWS]
+    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, PostgreSQL, RabbitMQ, Docker, k8s, Datadog, AWS]
   - to: 2022/04
     from: 2021/05
     role: Software Engineer
