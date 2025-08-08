@@ -37,7 +37,7 @@ jobs:
       url: https://traderepublic.com/
     responsibilities:
       - Maintain, extend, and develop Trading Experience backend systems
-      - Go-to person for the instrument search and portfolio chart systems
+      - Go-to person for the instrument search, appropriateness testing, and portfolio chart systems
       - Technical interviews
       - Help in designing new features by writing RFCs and ADRs
     tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, PostgreSQL, RabbitMQ, Snowflake, Kafka, Docker, k8s, LGTM stack, AWS]
