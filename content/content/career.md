@@ -9,7 +9,7 @@ author = "Mr.Schyzo"
 # About me, professionally
 
 Basically, I am a developer/engineer and I have been working in software engineering since December 2015.
-My 7+ years of experience are mainly focused in back-end application development 
+My 9+ years of experience are mainly focused in back-end application development 
 and I spent these years with the intent of getting continuously better in software engineering by working in different
 companies, each one with different technologies and ways of work. 
 I believe that this heterogeneous set of experiences allows me to be fairly versatile and pick up new tech 
@@ -17,14 +17,14 @@ with little friction.
 
 ## Job Experience
 
-This (badly) formatted timeline describes my relevant job experience in software engineering, as you can imagine, the
+This timeline describes my relevant job experience in software engineering, as you can imagine, the
 further you go back, the foggier is my memory about that.
 
 {{< timeline >}}
     {{<event
         url="jobs/trade-republic"
         from="05/2022" to="current" 
-        role="Engineer II" company="Trade Republic GmbH" 
+        role="Software Engineer" company="Trade Republic GmbH" 
     >}}
     {{<event
         url="jobs/prima-assicurazioni"

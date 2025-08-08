@@ -26,7 +26,7 @@ This can of course change in the future, depending on my needs or my wishes, but
 # Who I am
 ## Aseptic info
 My name is Marco Catapano and I was born in Pisa some point in time in the 90s. I lived there for 28 years before
-moving, not so far away, in Pistoia.
+moving around in other Tuscanian cities.
 
 I graduated in Computer Science in Pisa and, predictably enough, since then I worked (and am working) as a 
 Software Engineer/Developer (I still can't differentiate the two terms, so I'll say both).
