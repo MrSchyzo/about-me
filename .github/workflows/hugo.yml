@@ -60,7 +60,7 @@ jobs:
             --printUnusedTemplates \
             --baseURL "${{ steps.pages.outputs.base_url }}/" && popd
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: content/public
 
