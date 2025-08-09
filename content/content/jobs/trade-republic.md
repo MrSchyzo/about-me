@@ -44,7 +44,7 @@ ship the UX they were aiming for.
 In this timeframe I've quickly become the go-to person for Instrument-Search in both development, maintenance, and troubleshooting while gaining
 a tiny bit of exposure to our data pipelines.
 
-### Timeline
+### Timeline
 
 In order to prepare the company to the upcoming debit card, making Trade Republic an actual bank, I've been borrowed by the timeline team to
 rework the old timeline event system into a flexible platform that other teams could've used in self-service to generate events - like card payments - 
@@ -128,6 +128,8 @@ In this very moment I'm helping with creating the backend for the new Web UI, an
 ## Role & Responsibilities
 
 As a software engineer, my responsibilities mainly revolve around being an owner of the teams' project, develop new systems within my vertical, and having an impact in other teams. To give a non-exhaustive list, I have to:
+- design new features from the backend perspective
+- discuss these designs through RFCs and company-wide Architecture Reviews
 - develop and maintain teams' µservices
 - develop and contributing to other teams' µservices
 - interact with other functional teams (data, SRE, platform engineers)
