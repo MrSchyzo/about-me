@@ -34,7 +34,7 @@ jobs:
       - name: Make gomplate executable
         run: "chmod +x gomplate"
       - name: Install wkhtmltopdf package
-        run: "curl -L --fail -o wkhtmltopdf.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb && sudo dpkg --force-confold -i wkhtmltopdf.deb ; sudo apt --fix-broken install ; rm -f wkhtmltopdf.deb"
+        run: "sudo apt-get -y install wkhtmltopdf"
       - name: Generate CV
         run: >
           ls -halt ${{ steps.pwd.outputs.out }} ;
