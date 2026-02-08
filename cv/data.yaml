@@ -24,10 +24,10 @@ links:
 website: "https://mrschyzo.github.io/about-me/"
 role: Software Engineer
 summary: >
-  9+ years of experience in backend application development.
-  I spent these years with the intent of getting continuously better in software engineering. 
-  I have always had and I still have curiosity towards languages in order to improve everyday; 
+  I spent these years with the intent of getting continuously better in software engineering.
+  I have always had and I still have curiosity towards languages in order to improve everyday;
   learning is a never ending process, especially in IT.
+experienceStart: 2016
 jobs:
   - to: current
     from: 2022/05
@@ -36,11 +36,10 @@ jobs:
       name: Trade Republic
       url: https://traderepublic.com/
     responsibilities:
-      - Maintain, extend, and develop Trading Experience backend systems
+      - Maintain, extend, design, and develop backend systems for Web and Pro trading
       - Go-to person for the instrument search, appropriateness testing, and portfolio chart systems
-      - Technical interviews
-      - Help in designing new features by writing RFCs and ADRs
-    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, PostgreSQL, RabbitMQ, Snowflake, Kafka, Docker, k8s, LGTM stack, AWS]
+      - Shipping end-to-end features, from RFC to ADR to production and monitoring
+    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, Kafka, Redis, PostgreSQL, RabbitMQ, Snowflake, Docker, k8s, LGTM stack, AWS]
   - to: 2022/04
     from: 2021/05
     role: Software Engineer
@@ -94,10 +93,10 @@ skills:
   languages:
     pro: [Kotlin, Java, C#, Rust, VB, PHP]
     basic: [Elm, Python, Golang, sh, F#, C, JS]
-  frameworks: [Spring, VertX, Quarkus, Apache Camel, .NET Core, Actix Web]
-  tools: [Maven, Gradle, NuGet, Cargo, Pip, Git, Docker, IntelliJ IDEA, VSCode, Visual Studio, Insomnia, Postman, Paw]
+  frameworks: [Spring, VertX, Quarkus, Apache Camel, .NET Core, Actix Web, Kafka Streams, Selenium]
+  tools: [Maven, Gradle, NuGet, Cargo, Pip, Git, Docker, IntelliJ IDEA, VSCode, Visual Studio, Insomnia, Postman, Paw, Claude code]
   platforms: [
-    OCP, Kubernetes, AWS, EAP, GitHub, GitLab, Quay.io,
+    OCP, Kubernetes, AWS, EAP, GitHub, GitLab, Quay.io, Kafka,
     Datadog, Jira, Terraform, PostgreSQL, MySQL, Redis, Elasticsearch,
     ScyllaDB, Terraform, SonarCloud, RabbitMQ, ActiveMQ, JBoss Fuse
   ]
@@ -107,7 +106,7 @@ speaks:
   - lang: English
     level: C1+
 education:
-  - title: Bachelor’s Degree in CompSci
+  - title: Bachelor's Degree in CompSci
     score: 110/110 - with honours
     subjects: [algorithms, data structures, FP, OOP, basic math, formal languages, RDBMS, computer arch, networks]
     school:
