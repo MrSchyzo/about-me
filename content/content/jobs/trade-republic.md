@@ -11,7 +11,7 @@ author = "Mr.Schyzo"
 - place: full-remote in Pistoia, PT
 - start: May 2022
 
-# As an Engineer II (05/2022 - current)
+# As a Software Engineer (05/2022 - current)
 
 ## Summary
 
