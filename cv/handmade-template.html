@@ -93,7 +93,7 @@
             <td class="alternative">
                 <h1>{{.name}} {{.surname}}</h1>
                 <h2 class="role">{{.role}}</h2>
-                <div>{{.summary}}</div>
+                <div>{{math.Sub time.Now.Year .experienceStart}} years of experience in backend application development. {{.summary}}</div>
             </td>
             <td>
                 <h2>About me</h2>
@@ -155,7 +155,7 @@
                     <div><span class="bold">Basic knowledge:</span> {{join .basic ", "}}</div>
                 </div>
                 {{end}}
-                <h3>Frameworks</h3>
+                <h3>Frameworks/libraries</h3>
                 <div class="container">
                     <div>{{join .frameworks ", "}}</div>
                 </div>
