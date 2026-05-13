@@ -4,11 +4,11 @@ birth:
   when: 12/05/1993
   where: Pisa
 address:
-  street: via Modenese
+  street: via Rosseti
   number: 5
-  zip: 51100
-  city: Pistoia
-  cityCode: PT
+  zip: 52027
+  city: San Giovanni Valdarno
+  cityCode: AR
 phones:
   - "+39 3468772332"
 emails:
@@ -36,7 +36,7 @@ jobs:
       name: Trade Republic
       url: https://traderepublic.com/
     responsibilities:
-      - Maintain, extend, design, and develop backend systems for Web and Pro trading
+      - Maintain, extend, design, and develop backend systems for a new web user experience
       - Go-to person for the instrument search, appropriateness testing, and portfolio chart systems
       - Shipping end-to-end features, from RFC to ADR to production and monitoring
     tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, Kafka, Redis, PostgreSQL, RabbitMQ, Snowflake, Docker, k8s, LGTM stack, AWS]
