@@ -38,8 +38,8 @@ jobs:
     responsibilities:
       - Maintain, extend, design, and develop backend systems for a new web user experience
       - Go-to person for the instrument search, appropriateness testing, and portfolio chart systems
-      - Shipping end-to-end features, from RFC to ADR to production and monitoring
-    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, Kafka, Redis, PostgreSQL, RabbitMQ, Snowflake, Docker, k8s, LGTM stack, AWS]
+      - Shipping end-to-end features and microservices, from RFC to ADR to production and monitoring
+    tech: [Kotlin, Spring, VertX, GH Actions, ScyllaDB, Elasticsearch, Kafka, Kafka Streams, Redis, PostgreSQL, RabbitMQ, Snowflake, Docker, k8s, LGTM stack, AWS]
   - to: 2022/04
     from: 2021/05
     role: Software Engineer
@@ -47,8 +47,9 @@ jobs:
       name: Prima Assicurazioni
       url: https://prima.it/
     responsibilities:
-      - Develop Agents’ platform Backend in Rust
+      - Develop Agents' platform Backend in Rust
       - Develop Agents' platform Frontend in Elm
+      - Collaborating via code reviews and pair programming (driver-navigator style)
     tech: [Rust, Docker, Elm, GraphQL, k8s, RabbitMQ, PostgreSQL, Datadog]
   - to: 2021/05
     from: 2018/09
